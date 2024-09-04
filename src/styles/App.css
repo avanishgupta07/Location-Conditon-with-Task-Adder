@@ -1,0 +1,163 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgb(245, 245, 245); /* Light gray background for the entire page */
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  background-color: rgb(255, 255, 255); /* White background for the container */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1; /* Ensure container is above the background */
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(230, 230, 230); /* Slightly tinted background color */
+  z-index: -1; /* Place behind the container */
+  border-radius: 10px; /* Match container border-radius */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.task-input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+}
+
+.list-group-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #dee2e6;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255); /* White background for each list item */
+}
+
+.btn {
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 5px 10px;
+  background-color: rgb(33, 150, 243); /* Primary button color */
+  color: rgb(255, 255, 255); /* White text */
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: rgb(21, 101, 192); /* Darker shade on hover */
+}
+
+@media (min-width: 768px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.login, .auth {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  background-color: rgb(255, 255, 255); /* White background for the login/auth section */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login input, .auth input {
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.login button, .auth button {
+  width: 100%;
+  max-width: 300px;
+}
+
+.auth .form-control, .task-input .form-control, .task-input .input-group-append .btn, .task-item .btn {
+  border-radius: 5px;
+}
+
+.task-item {
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255); /* White background for each task item */
+}
+
+.card {
+  max-width: 700px;
+  margin: auto;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: rgb(255, 255, 255); /* White background for the card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.weather-container {
+  width: 150px;
+  height: 100px;
+  margin: 10px auto;
+  padding: 8px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: rgb(255, 255, 255); /* White background for weather container */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather-title {
+  font-size: 0.8em;
+  margin-bottom: 4px;
+  color: #333;
+}
+
+.weather-details {
+  font-size: 0.8em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.temperature, .condition {
+  margin: 1px 0;
+}
+
+.temperature-value {
+  font-size: 1em;
+  color: #ff5722; /* A warm color for temperature */
+  font-weight: bold;
+}
+
+.condition-value {
+  font-size: 0.9em;
+  color: #2196f3; /* A cool color for condition */
+  font-weight: bold;
+}
+
+.loading-text, .error-text {
+  font-size: 0.8em;
+  color: #ff5722; /* A warm color for loading and error messages */
+}
