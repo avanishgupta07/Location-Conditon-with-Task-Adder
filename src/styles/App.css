@@ -1,6 +1,7 @@
+/* Global Styles */
 body {
-  font-family: Arial, sans-serif;
-  background-color: rgb(245, 245, 245); /* Light gray background for the entire page */
+  font-family: 'Roboto', sans-serif; /* Use a modern font like Roboto */
+  background: linear-gradient(135deg, #f0f4f8, #e0e7ef); /* Soft gradient background */
   margin: 0;
   padding: 0;
 }
@@ -9,11 +10,11 @@ body {
   max-width: 600px;
   margin: auto;
   padding: 20px;
-  background-color: rgb(255, 255, 255); /* White background for the container */
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Deep shadow for elevated look */
   position: relative;
-  z-index: 1; /* Ensure container is above the background */
+  z-index: 1;
 }
 
 .container::before {
@@ -23,10 +24,10 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgb(230, 230, 230); /* Slightly tinted background color */
-  z-index: -1; /* Place behind the container */
-  border-radius: 10px; /* Match container border-radius */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+  z-index: -1;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 .task-input {
@@ -44,25 +45,32 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
-  border: 1px solid #dee2e6;
-  margin-bottom: 5px;
-  border-radius: 5px;
-  background-color: rgb(255, 255, 255); /* White background for each list item */
+  padding: 12px;
+  border: 1px solid #e0e0e0;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  background-color: #fff;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.list-group-item:hover {
+  transform: translateY(-2px); /* Subtle hover effect */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .btn {
   cursor: pointer;
-  border-radius: 5px;
-  padding: 5px 10px;
-  background-color: rgb(33, 150, 243); /* Primary button color */
-  color: rgb(255, 255, 255); /* White text */
+  border-radius: 8px;
+  padding: 8px 16px;
+  background-color: #2196f3; /* Vibrant button color */
+  color: #fff;
   border: none;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s;
 }
 
 .btn:hover {
-  background-color: rgb(21, 101, 192); /* Darker shade on hover */
+  background-color: #1976d2; /* Darker shade on hover */
+  transform: translateY(-2px);
 }
 
 @media (min-width: 768px) {
@@ -76,51 +84,57 @@ body {
   flex-direction: column;
   align-items: center;
   margin-top: 50px;
-  background-color: rgb(255, 255, 255); /* White background for the login/auth section */
+  background-color: #fff;
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 .login input, .auth input {
   width: 100%;
-  max-width: 300px;
-  margin-bottom: 10px;
-  border-radius: 5px;
+  max-width: 350px;
+  margin-bottom: 12px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
 }
 
 .login button, .auth button {
   width: 100%;
-  max-width: 300px;
+  max-width: 350px;
+  padding: 10px;
+  font-size: 16px;
 }
 
 .auth .form-control, .task-input .form-control, .task-input .input-group-append .btn, .task-item .btn {
-  border-radius: 5px;
+  border-radius: 8px;
 }
 
 .task-item {
-  margin-bottom: 10px;
-  border-radius: 5px;
-  background-color: rgb(255, 255, 255); /* White background for each task item */
+  margin-bottom: 12px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 .card {
   max-width: 700px;
   margin: auto;
-  border-radius: 10px;
+  border-radius: 15px;
   padding: 20px;
-  background-color: rgb(255, 255, 255); /* White background for the card */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 .weather-container {
-  width: 150px;
-  height: 100px;
-  margin: 10px auto;
-  padding: 8px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  background-color: rgb(255, 255, 255); /* White background for weather container */
+  width: 160px;
+  height: 110px;
+  margin: 20px auto;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #ffcc80, #ffab40); /* Gradient background */
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -129,35 +143,36 @@ body {
 }
 
 .weather-title {
-  font-size: 0.8em;
+  font-size: 0.9em;
   margin-bottom: 4px;
   color: #333;
+  font-weight: bold;
 }
 
 .weather-details {
-  font-size: 0.8em;
+  font-size: 0.9em;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .temperature, .condition {
-  margin: 1px 0;
+  margin: 2px 0;
 }
 
 .temperature-value {
-  font-size: 1em;
-  color: #ff5722; /* A warm color for temperature */
+  font-size: 1.1em;
+  color: #ff7043; /* A warm color for temperature */
   font-weight: bold;
 }
 
 .condition-value {
-  font-size: 0.9em;
-  color: #2196f3; /* A cool color for condition */
+  font-size: 0.95em;
+  color: #42a5f5; /* A cool color for condition */
   font-weight: bold;
 }
 
 .loading-text, .error-text {
-  font-size: 0.8em;
-  color: #ff5722; /* A warm color for loading and error messages */
+  font-size: 0.85em;
+  color: #ff7043; /* A warm color for loading and error messages */
 }
