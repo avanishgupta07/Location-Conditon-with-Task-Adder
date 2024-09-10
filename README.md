@@ -8,12 +8,11 @@
     <p>Live Weather condition update automatically with location </p>
     <p>Add and delete task with priority Wise </p>
 
-    <h2>Clone the Repository</h2>
+  <h2>Clone the Repository</h2>
     <p>To get started, clone the repository using the following command:</p>
     <pre><code>git clone https://github.com/avanishgupta07/Location-Conditon-with-Task-Adder.git</code></pre>
     <h2>Setup</h2>
     <p>After cloning the repository, navigate into the project directory:</p>
-    <pre><code>cd userfrontend</code></pre>
     <h2>Installation</h2>
     <p>Install the required dependencies by running:</p>
     <pre><code>npm install</code></pre>
