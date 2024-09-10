@@ -14,7 +14,7 @@ const App = () => {
   return (
   
     <div className="app container">
-      <h1 className="text-center my-4">Advanced To-Do Application</h1>
+      <h1 className="text-center my-4">Advanced Task Adder Application</h1>
       {!isAuthenticated ? (
         <Auth />
       ) : (
